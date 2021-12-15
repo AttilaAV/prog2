@@ -6,5 +6,5 @@ Everything is stored in mysql databse. <br />
 Fronted: React <br />
 Backend: Nodejs / mySql
 
-![LoginPage](https://prnt.sc/2364b26) <br />
-![MainPage](https://prnt.sc/2364iff)
+![LoginPage](images/login.png) <br />
+![MainPage](images/main.png)

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import Axios from "axios";
-
+import { Link } from "react-router-dom";
 function Register() {
   const [usernameReg, setUsernameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
@@ -49,6 +49,9 @@ function Register() {
           <button className="registerbutton" onClick={register}>
             Register
           </button>
+          <h2 className="login">
+            Already a member? <Link to="/login">login</Link>
+          </h2>
         </div>
       </form>
     </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import Axios from "axios";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -20,6 +21,7 @@ function Login() {
       if (response.data.message) {
         setLoginStatus(response.data.message);
       } else {
+        history.push("/main");
         setLoginStatus(response.data[0].username);
       }
     });
@@ -67,6 +69,9 @@ function Login() {
           <button className="loginbutton" onClick={login}>
             login
           </button>
+          <h2 className="register">
+            Not a member? <Link to="/register">Register</Link>
+          </h2>
           <h1 className="result">{loginStatus}</h1>
         </div>
       </form>
